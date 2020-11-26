@@ -11,9 +11,9 @@ public class BubbleSort {
     }
 
     private static void bubbleSort(int[] arr) {
-        for(int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
             int end = arr.length - i - 1;
-            for(int j = 0; j < end; j++) {
+            for (int j = 0; j < end; j++) {
                 if (arr[j] > arr[j + 1]) {
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
