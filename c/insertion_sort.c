@@ -1,11 +1,13 @@
 #include <stdio.h>
 
+// Utility function to print the array
 void print_arr(int arr[], int arr_len) {
     for (int i = 0; i < arr_len; i++)
         printf("%d ", arr[i]);
     printf("\n");
 }
 
+// Function implementing Insertion Sort
 void insertion_sort(int arr[], int arr_len) {
     for (int i = 1; i < arr_len; i++) {
         int temp = arr[i];
@@ -18,6 +20,7 @@ void insertion_sort(int arr[], int arr_len) {
     }
 }
 
+// Driver method
 int main() {
     int arr[] = {5, 9, 3, 1, 8, 6, 4, 2, 7};
     int arr_len = sizeof(arr) / sizeof(arr[0]);

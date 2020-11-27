@@ -1,4 +1,5 @@
 def selection_sort(arr):
+    """Function implementing Selection Sort"""
     arr_len = len(arr)
     for i in range(0, arr_len):
         min_idx = i
@@ -10,6 +11,7 @@ def selection_sort(arr):
 
 
 def main():
+    """Driver function"""
     arr = [5, 9, 3, 1, 8, 6, 4, 2, 7]
     print("Before: ", arr)
     selection_sort(arr)

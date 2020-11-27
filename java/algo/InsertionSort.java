@@ -3,13 +3,7 @@ package algo;
 import java.util.Arrays;
 
 public class InsertionSort {
-    public static void main(String[] args) {
-        int[] arr = {5, 9, 3, 1, 8, 6, 4, 2, 7};
-        System.out.println("Before: " + Arrays.toString(arr));
-        insertionSort(arr);
-        System.out.println("After: " + Arrays.toString(arr));
-    }
-
+    // Method implementing Insertion Sort
     private static void insertionSort(int[] arr) {
         for (int i = 1; i < arr.length; i++) {
             int temp = arr[i];
@@ -20,5 +14,13 @@ public class InsertionSort {
             }
             arr[j + 1] = temp;
         }
+    }
+
+    // Driver method
+    public static void main(String[] args) {
+        int[] arr = {5, 9, 3, 1, 8, 6, 4, 2, 7};
+        System.out.println("Before: " + Arrays.toString(arr));
+        insertionSort(arr);
+        System.out.println("After: " + Arrays.toString(arr));
     }
 }

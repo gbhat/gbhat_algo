@@ -1,17 +1,20 @@
 #include <stdio.h>
 
+// Utility function to print the array
 void print_arr(int arr[], int arr_len) {
     for (int i = 0; i < arr_len; i++)
         printf("%d ", arr[i]);
     printf("\n");
 }
 
+// Utility function to swap two elements of the array
 void swap(int arr[], int i, int j) {
     int temp = arr[i];
     arr[i] = arr[j];
     arr[j] = temp;
 }
 
+// Function to convert array into max heap at index idx
 void max_heapify(int arr[], int idx, int end) {
     int left = 2 * idx + 1;
     int right = 2 * idx + 2;
@@ -22,10 +25,11 @@ void max_heapify(int arr[], int idx, int end) {
         max_idx = right;
     if (max_idx != idx) {
         swap(arr, idx, max_idx);
-        max_heapify(arr, max_idx, end);
+        max_heapify(arr, max_idx, end); // Check if number has to be pushed further down
     }
 }
 
+// Function implementing Heap Sort
 void heap_sort(int arr[], int arr_len) {
     int end = arr_len - 1;
 
@@ -36,11 +40,12 @@ void heap_sort(int arr[], int arr_len) {
 
     while(end > 0) {
         swap(arr, 0, end);
-        max_heapify(arr, 0, end);
         end--;
+        max_heapify(arr, 0, end);
     }
 }
 
+// Driver function
 int main() {
     int arr[] = {5, 9, 3, 1, 8, 6, 4, 2, 7};
     int arr_len = sizeof(arr) / sizeof(arr[0]);
