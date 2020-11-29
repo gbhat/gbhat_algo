@@ -34,11 +34,11 @@ void heap_sort(int arr[], int arr_len) {
     int end = arr_len - 1;
 
     // First convert the array into a max heap
-    for(int i = (arr_len - 1) / 2; i >= 0; i--) {
+    for (int i = (arr_len - 1) / 2; i >= 0; i--) {
         max_heapify(arr, i, end);
     }
 
-    while(end > 0) {
+    while (end > 0) {
         swap(arr, 0, end);
         end--;
         max_heapify(arr, 0, end);
