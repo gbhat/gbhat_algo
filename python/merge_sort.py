@@ -1,8 +1,6 @@
+# Function to merge two sorted partitions of the array
+# One partition is (low to mid) and another one is from (mid + 1 to high)
 def merge(arr, low, mid, high):
-    """
-    Function to merge two sorted partitions of the array
-    One partition is (low to mid) and another one is from (mid + 1 to high)
-    """
     temp = []
     l = low
     m = mid + 1
@@ -24,8 +22,8 @@ def merge(arr, low, mid, high):
     arr[low: high + 1] = temp[:]
 
 
+# Function implementing Merge Sort recursively
 def merge_sort(arr, low, high):
-    """Function implementing Merge Sort recursively"""
     if low < high:
         mid = int((low + high) / 2)
         merge_sort(arr, low, mid)
@@ -33,8 +31,8 @@ def merge_sort(arr, low, high):
         merge(arr, low, mid, high)
 
 
+# Driver function
 def main():
-    """Driver function"""
     arr = [5, 9, 3, 1, 8, 6, 4, 2, 7]
     arr_len = len(arr)
     print("Before: ", arr)

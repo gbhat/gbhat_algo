@@ -1,5 +1,5 @@
+# Function implementing Bubble Sort
 def bubble_sort(arr):
-    """Function implementing Bubble Sort"""
     arr_len = len(arr)
     for i in range(arr_len):
         end = arr_len - i - 1
@@ -8,8 +8,8 @@ def bubble_sort(arr):
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
 
 
+# Driver function
 def main():
-    """Driver function"""
     arr = [5, 9, 3, 1, 8, 6, 4, 2, 7]
     print("Before: ", arr)
     bubble_sort(arr)

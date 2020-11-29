@@ -1,5 +1,5 @@
+# Function to convert array into max heap at index idx
 def max_heapify(arr, idx, end):
-    """Function to convert array into max heap at index idx"""
     left = idx * 2 + 1
     right = idx * 2 + 2
     max_idx = idx
@@ -12,8 +12,8 @@ def max_heapify(arr, idx, end):
         max_heapify(arr, max_idx, end)  # Check if number has to be pushed further down
 
 
+# Function implementing Heap Sort
 def heap_sort(arr):
-    """Function implementing Heap Sort"""
     arr_len = len(arr)
     end = arr_len - 1
     for idx in reversed(range(0, int((arr_len - 1) / 2))):
@@ -24,8 +24,8 @@ def heap_sort(arr):
         max_heapify(arr, 0, end)
 
 
+# Driver function
 def main():
-    """Driver function"""
     arr = [5, 9, 3, 1, 8, 6, 4, 2, 7]
     print("Before: ", arr)
     heap_sort(arr)

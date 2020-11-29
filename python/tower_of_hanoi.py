@@ -1,5 +1,5 @@
+# Function to solve tower of hanoi recursively
 def tower_of_hanoi(no_of_disks, source, aux, target):
-    """Function to solve tower of hanoi recursively"""
     if no_of_disks == 1:
         print("Move disk 1 from ", source, " to ", target)
         return
@@ -9,9 +9,8 @@ def tower_of_hanoi(no_of_disks, source, aux, target):
     # Move no_of_disks - 1 disks from aux to target using source
     tower_of_hanoi(no_of_disks - 1, aux, source, target)
 
-
+# Driver function
 def main():
-    """Driver function"""
     print("Steps to solve tower of hanoi with 3 disks:")
     tower_of_hanoi(3, "Source", "Aux", "Target")
 
