@@ -7,15 +7,15 @@ public class InterpolationSearch {
         int low = 0;
         int high = arr.length - 1;
         while (key >= arr[low] && key <= arr[high] && arr[high] != arr[low]) {
-            int mid = low + ((key - arr[low]) * (high - low) / (arr[high] - arr[low]));
-            if (arr[mid] == key) {
+            int pos = low + ((key - arr[low]) * (high - low) / (arr[high] - arr[low]));
+            if (arr[pos] == key) {
                 found = true;
-                System.out.println("Found key at index " + mid);
+                System.out.println("Found key at index " + pos);
                 break;
-            } else if (arr[mid] > key)
-                high = mid - 1;
+            } else if (arr[pos] > key)
+                high = pos - 1;
             else
-                low = mid + 1;
+                low = pos + 1;
         }
         if (key == arr[low]) {
             found = true;

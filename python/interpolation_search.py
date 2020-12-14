@@ -4,15 +4,15 @@ def interpolation_search(arr, key):
     low = 0
     high = len(arr) - 1
     while arr[low] <= key <= arr[high] and arr[high] != arr[low]:
-        mid = int(low + ((key - arr[low]) * (high - low) / (arr[high] - arr[low])))
-        if arr[mid] == key:
+        pos = int(low + ((key - arr[low]) * (high - low) / (arr[high] - arr[low])))
+        if arr[pos] == key:
             found = True
-            print("Found key at index ", mid)
+            print("Found key at index ", pos)
             break
-        elif arr[mid] > key:
-            high = mid - 1
+        elif arr[pos] > key:
+            high = pos - 1
         else:
-            low = mid + 1
+            low = pos + 1
 
     if key == arr[low]:
         found = True

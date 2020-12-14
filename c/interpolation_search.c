@@ -6,15 +6,15 @@ void interpolation_search(int arr[], int arr_len, int key) {
     int low = 0;
     int high = arr_len - 1;
     while (key >= arr[low] && key <= arr[high] && arr[high] != arr[low]) {
-        int mid = low + ((key - arr[low]) * (high - low) / (arr[high] - arr[low]));
-        if (arr[mid] == key) {
+        int pos = low + ((key - arr[low]) * (high - low) / (arr[high] - arr[low]));
+        if (arr[pos] == key) {
             found = 1;
-            printf("Found key at index %d\n", mid);
+            printf("Found key at index %d\n", pos);
             break;
-        } else if (arr[mid] > key)
-            high = mid - 1;
+        } else if (arr[pos] > key)
+            high = pos - 1;
         else
-            low = mid + 1;
+            low = pos + 1;
     }
     if (arr[low] == key) {
         found = 1;
