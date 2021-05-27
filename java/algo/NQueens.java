@@ -1,3 +1,5 @@
+package algo;
+
 import java.util.Arrays;
 
 public class NQueens {
@@ -24,10 +26,13 @@ public class NQueens {
         for(int row = 0; row < BOARD_SIZE; row++) {
             if (!isSafe(row, column))
                 continue;
+
             board[row][column] = 1;
+
             if (solveNQueens(column + 1))
                 return true;
-            board[row][column] = 0;
+
+            board[row][column] = 0;     // Triggers backtracking
         }
         return false;
     }
